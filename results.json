@@ -1,7 +1,5 @@
 {
-  "test_link": {
-    "link": null
-  },
+  "test_link": "NameError(\"name 'NOTEBOOK_LINK' is not defined\")\nTraceback (most recent call last):\n  File \"/tmp/ipykernel_1538/49652930.py\", line 108, in <cell line: 0>\n    cur_res = test()\n              ^^^^^^\n  File \"/tmp/ipykernel_1538/49652930.py\", line 8, in test_link\n    'link': NOTEBOOK_LINK\n            ^^^^^^^^^^^^^\nNameError: name 'NOTEBOOK_LINK' is not defined\n",
   "test_read_data": {
     "lengths": [
       1750,
@@ -14,7 +12,10 @@
     "tag2id_length": 7,
     "Spongebob": 1
   },
-  "test_count_oov": "KeyError(2408)\nTraceback (most recent call last):\n  File \"/tmp/ipykernel_2624/49652930.py\", line 108, in <cell line: 0>\n    cur_res = test()\n              ^^^^^^\n  File \"/tmp/ipykernel_2624/49652930.py\", line 35, in test_count_oov\n    'dev_oov': count_oov(dev_sequences),\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/ipykernel_2624/1152141759.py\", line 12, in count_oov\n    word_id = vocab.word2id[word]\n              ~~~~~~~~~~~~~^^^^^^\nKeyError: 2408\n",
+  "test_count_oov": {
+    "dev_oov": 12500,
+    "test_oov": 28500
+  },
   "test_prepare_data_loader": {
     "lengths": [
       110,
@@ -22,6 +23,9 @@
       32
     ]
   },
-  "test_NERNet": "KeyError('F1')\nTraceback (most recent call last):\n  File \"/tmp/ipykernel_2624/49652930.py\", line 108, in <cell line: 0>\n    cur_res = test()\n              ^^^^^^\n  File \"/tmp/ipykernel_2624/49652930.py\", line 66, in test_NERNet\n    'f1': results['F1'],\n          ~~~~~~~^^^^^^\nKeyError: 'F1'\n",
-  "test_glove": "ValueError('hidden_size must be greater than zero')\nTraceback (most recent call last):\n  File \"/tmp/ipykernel_2624/49652930.py\", line 108, in <cell line: 0>\n    cur_res = test()\n              ^^^^^^\n  File \"/tmp/ipykernel_2624/49652930.py\", line 81, in test_glove\n    best_model = NERNet(vocab.n_words, embedding_size=300, hidden_size=hidden_size, output_size=vocab.n_tags, n_layers=n_layers, directions=directions)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/ipykernel_2624/1774624040.py\", line 15, in __init__\n    self.lstm = nn.LSTM(\n                ^^^^^^^^\n  File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/rnn.py\", line 1013, in __init__\n    super().__init__(\"LSTM\", *args, **kwargs)\n  File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/rnn.py\", line 148, in __init__\n    raise ValueError(\"hidden_size must be greater than zero\")\nValueError: hidden_size must be greater than zero\n"
+  "test_NERNet": {
+    "f1": 0.9068388620710239,
+    "f1_wo_o": 0.6722237840010079
+  },
+  "test_glove": "ValueError('hidden_size must be greater than zero')\nTraceback (most recent call last):\n  File \"/tmp/ipykernel_1538/49652930.py\", line 108, in <cell line: 0>\n    cur_res = test()\n              ^^^^^^\n  File \"/tmp/ipykernel_1538/49652930.py\", line 81, in test_glove\n    best_model = NERNet(vocab.n_words, embedding_size=300, hidden_size=hidden_size, output_size=vocab.n_tags, n_layers=n_layers, directions=directions)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/ipykernel_1538/1774624040.py\", line 15, in __init__\n    self.lstm = nn.LSTM(\n                ^^^^^^^^\n  File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/rnn.py\", line 1013, in __init__\n    super().__init__(\"LSTM\", *args, **kwargs)\n  File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/rnn.py\", line 148, in __init__\n    raise ValueError(\"hidden_size must be greater than zero\")\nValueError: hidden_size must be greater than zero\n"
 }
