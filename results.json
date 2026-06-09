@@ -13,8 +13,8 @@
     "Spongebob": 1
   },
   "test_count_oov": {
-    "dev_oov": 12500,
-    "test_oov": 28500
+    "dev_oov": 638,
+    "test_oov": 1368
   },
   "test_prepare_data_loader": {
     "lengths": [
@@ -24,8 +24,8 @@
     ]
   },
   "test_NERNet": {
-    "f1": 0.9068388620710239,
-    "f1_wo_o": 0.6722237840010079
+    "f1": 0.9310913290098144,
+    "f1_wo_o": 0.7557301017285062
   },
   "test_glove": "ValueError('hidden_size must be greater than zero')\nTraceback (most recent call last):\n  File \"/tmp/ipykernel_1538/49652930.py\", line 108, in <cell line: 0>\n    cur_res = test()\n              ^^^^^^\n  File \"/tmp/ipykernel_1538/49652930.py\", line 81, in test_glove\n    best_model = NERNet(vocab.n_words, embedding_size=300, hidden_size=hidden_size, output_size=vocab.n_tags, n_layers=n_layers, directions=directions)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/ipykernel_1538/1774624040.py\", line 15, in __init__\n    self.lstm = nn.LSTM(\n                ^^^^^^^^\n  File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/rnn.py\", line 1013, in __init__\n    super().__init__(\"LSTM\", *args, **kwargs)\n  File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/rnn.py\", line 148, in __init__\n    raise ValueError(\"hidden_size must be greater than zero\")\nValueError: hidden_size must be greater than zero\n"
 }
